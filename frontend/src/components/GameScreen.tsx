@@ -10,6 +10,7 @@ interface GameScreenProps {
 }
 
 const TOTAL_QUESTIONS = 10;
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL || 'https://globe-trotter-5.onrender.com';
 
 const GameScreen: React.FC<GameScreenProps> = ({ userId }) => {
   const [gameState, setGameState] = useState<GameState | null>(null);
@@ -21,7 +22,7 @@ const GameScreen: React.FC<GameScreenProps> = ({ userId }) => {
   const [showConfetti, setShowConfetti] = useState(false);
 
   const fetchDestination = async () => {
-    const { data } = await axios.get<GameState>('http://localhost:3000/api/destination/random');
+    const { data } = await axios.get<GameState>(`${BACKEND_URL}/api/destination/random`);
     setGameState(data);
     setFeedback(null);
     setSelectedAnswer(null);
@@ -31,7 +32,7 @@ const GameScreen: React.FC<GameScreenProps> = ({ userId }) => {
   const submitAnswer = async (answer: string) => {
     if (feedback) return;
 
-    const { data } = await axios.post<Feedback>('http://localhost:3000/api/destination/answer', {
+    const { data } = await axios.post<Feedback>(`${BACKEND_URL}/api/destination/answer`, {
       destinationId: gameState?.destinationId,
       selectedAnswer: answer,
       userId,

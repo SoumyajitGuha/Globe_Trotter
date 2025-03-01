@@ -4,8 +4,12 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost/globetrotter')
+const mongoUri = process.env.MONGO_URI || 'mongodb://localhost/globetrotter';
+console.log('Connecting to:', mongoUri); // Debug the URI
+
+mongoose.connect(mongoUri)
   .then(() => {
-    app.listen(3000, () => console.log('Server running on port 3000'));
+    const port = process.env.PORT || 3000; // Dynamic port for Render
+    app.listen(port, () => console.log(`Server running on port ${port}`));
   })
   .catch(err => console.error('MongoDB connection error:', err));

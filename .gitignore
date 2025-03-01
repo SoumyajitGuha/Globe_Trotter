@@ -1,6 +1,9 @@
 # Ignore node_modules for both frontend and backend
 backend/node_modules/
+backend/dist/
+backend/.env
 frontend/node_modules/
+frontend/.env
 
 # Ignore other unnecessary files
 .env
