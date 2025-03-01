@@ -1,0 +1,210 @@
+[
+    {
+        "city": "Paris",
+        "country": "France",
+        "clues": [
+            "This city is home to a famous tower that sparkles every night.",
+            "Known as the 'City of Love' and a hub for fashion and art."
+        ],
+        "fun_fact": [
+            "The Eiffel Tower was supposed to be dismantled after 20 years but was saved because it was useful for radio transmissions!",
+            "Paris has only one stop sign in the entire city—most intersections rely on priority-to-the-right rules."
+        ],
+        "trivia": [
+            "This city is famous for its croissants and macarons. Bon appétit!",
+            "Paris was originally a Roman city called Lutetia."
+        ]
+    },
+    {
+        "city": "Tokyo",
+        "country": "Japan",
+        "clues": [
+            "This city has the busiest pedestrian crossing in the world.",
+            "You can visit an entire district dedicated to anime, manga, and gaming."
+        ],
+        "fun_fact": [
+            "Tokyo was originally a small fishing village called Edo before becoming the bustling capital it is today!",
+            "More than 14 million people live in Tokyo, making it one of the most populous cities in the world."
+        ],
+        "trivia": [
+            "The city has over 160,000 restaurants, more than any other city in the world.",
+            "Tokyo’s subway system is so efficient that train delays of just a few minutes come with formal apologies."
+        ]
+    },
+    {
+        "city": "New York",
+        "country": "USA",
+        "clues": [
+            "Home to a green statue gifted by France in the 1800s.",
+            "Nicknamed 'The Big Apple' and known for its Broadway theaters."
+        ],
+        "fun_fact": [
+            "The Statue of Liberty was originally a copper color before oxidizing to its iconic green patina.",
+            "Times Square was once called Longacre Square before being renamed in 1904."
+        ],
+        "trivia": [
+            "New York City has 468 subway stations, making it one of the most complex transit systems in the world.",
+            "The Empire State Building has its own zip code: 10118."
+        ]
+    },
+    {
+        "city": "London",
+        "country": "United Kingdom",
+        "clues": [
+            "Home to a famous clock tower that is often mistaken for its bell.",
+            "This city has a royal palace where the king resides."
+        ],
+        "fun_fact": [
+            "Big Ben actually refers to the bell inside the clock tower, not the tower itself!",
+            "London has over 170 museums, including the British Museum, which has artifacts from around the world."
+        ],
+        "trivia": [
+            "The London Underground is the oldest subway system in the world, opened in 1863.",
+            "Buckingham Palace has over 700 rooms!"
+        ]
+    },
+    {
+        "city": "Rome",
+        "country": "Italy",
+        "clues": [
+            "An ancient city famous for its gladiators and massive amphitheater.",
+            "This city is home to an independent country within its borders."
+        ],
+        "fun_fact": [
+            "The Colosseum could hold up to 50,000 spectators in ancient times!",
+            "Vatican City, the smallest country in the world, is located within Rome."
+        ],
+        "trivia": [
+            "Ancient Romans used urine as a mouthwash because of its ammonia content!",
+            "Rome has a fountain that collects millions of euros in coins every year—Trevi Fountain!"
+        ]
+    },
+    {
+        "city": "Dubai",
+        "country": "United Arab Emirates",
+        "clues": [
+            "This city has the world's tallest building.",
+            "Famous for its artificial islands shaped like palm trees."
+        ],
+        "fun_fact": [
+            "The Burj Khalifa is so tall that people on the top floors see the sunset a few minutes later than those on the ground.",
+            "Dubai’s police force has luxury supercars like Ferraris and Lamborghinis."
+        ],
+        "trivia": [
+            "Before oil was discovered, Dubai was a small fishing and pearl-diving town.",
+            "The city has an indoor ski resort, despite being in a desert!"
+        ]
+    },
+    {
+        "city": "Sydney",
+        "country": "Australia",
+        "clues": [
+            "This city has a world-famous opera house with a unique sail-like design.",
+            "It’s home to one of the world’s largest natural harbors."
+        ],
+        "fun_fact": [
+            "The Sydney Opera House took 14 years to build and was initially estimated to cost $7 million, but ended up costing $102 million!",
+            "Sydney’s Bondi Beach was one of the first places in the world to introduce surf lifesaving."
+        ],
+        "trivia": [
+            "Sydney's harbor is so large that it could fit all of the world’s navies combined.",
+            "The city was originally a British penal colony established in 1788."
+        ]
+    },
+    {
+        "city": "Rio de Janeiro",
+        "country": "Brazil",
+        "clues": [
+            "Famous for its massive statue of Jesus on a mountain.",
+            "Hosts one of the biggest carnival celebrations in the world."
+        ],
+        "fun_fact": [
+            "Rio’s Christ the Redeemer statue was struck by lightning in 2014, damaging its thumb!",
+            "The Maracanã Stadium once held the record for the highest attendance at a football match."
+        ],
+        "trivia": [
+            "The name ‘Rio de Janeiro’ means ‘River of January’ in Portuguese.",
+            "The city’s Copacabana Beach has millions of visitors every year."
+        ]
+    },
+    {
+        "city": "Shanghai",
+        "country": "China",
+        "clues": [
+            "This city has one of the busiest ports in the world.",
+            "Famous for a waterfront area called The Bund, featuring historic and modern skyscrapers."
+        ],
+        "fun_fact": [
+            "Shanghai has the fastest commercial train in the world, the Maglev, which reaches speeds of 431 km/h (268 mph).",
+            "The city’s name means ‘Upon the Sea’ in Chinese."
+        ],
+        "trivia": [
+            "Shanghai is home to the world’s second-tallest building, the Shanghai Tower.",
+            "The city has more than 24 million residents, making it one of the most populous in the world."
+        ]
+    },
+    {
+        "city": "Istanbul",
+        "country": "Turkey",
+        "clues": [
+            "This city is the only one in the world that spans two continents.",
+            "It was once known as Constantinople and was the capital of the Byzantine Empire."
+        ],
+        "fun_fact": [
+            "The Grand Bazaar in Istanbul is one of the oldest and largest covered markets in the world, with over 4,000 shops.",
+            "Istanbul has been the capital of three great empires: Roman, Byzantine, and Ottoman."
+        ],
+        "trivia": [
+            "The Bosphorus Strait separates the European and Asian sides of the city.",
+            "Tulips, often associated with the Netherlands, actually originated in Turkey."
+        ]
+    },
+    {
+        "city": "Moscow",
+        "country": "Russia",
+        "clues": [
+            "This city is home to a colorful cathedral with onion-shaped domes.",
+            "It has the deepest metro system in the world."
+        ],
+        "fun_fact": [
+            "Moscow’s Metro stations are so beautifully designed that they are sometimes called ‘underground palaces.’",
+            "Red Square got its name from an old Russian word meaning ‘beautiful,’ not the color or communism."
+        ],
+        "trivia": [
+            "Moscow is home to the Kremlin, a massive fortress that houses the government.",
+            "The city has more billionaires than any other city except New York."
+        ]
+    },
+    {
+        "city": "Mumbai",
+        "country": "India",
+        "clues": [
+            "Home to the world’s largest film industry by production volume.",
+            "This city has the Gateway of India, a famous colonial-era monument."
+        ],
+        "fun_fact": [
+            "Mumbai was originally a group of seven islands before land reclamation connected them into one city.",
+            "The city’s train network carries more than 7.5 million people daily!"
+        ],
+        "trivia": [
+            "Mumbai’s dabbawalas deliver thousands of home-cooked meals every day with remarkable accuracy, using a system studied by business schools worldwide.",
+            "The name ‘Mumbai’ comes from the local goddess Mumbadevi."
+        ]
+    },
+    {
+        "city": "Los Angeles",
+        "country": "USA",
+        "clues": [
+            "Famous for its Hollywood sign and movie industry.",
+            "This city has sunny weather almost all year round."
+        ],
+        "fun_fact": [
+            "Los Angeles is home to the world’s shortest railway, the Angels Flight funicular, which is only 298 feet long.",
+            "The city’s original name was ‘El Pueblo de Nuestra Señora la Reina de los Ángeles de Porciúncula.’"
+        ],
+        "trivia": [
+            "Los Angeles is one of the most diverse cities in the world, with residents speaking over 200 languages.",
+            "The Hollywood Walk of Fame has more than 2,700 stars honoring celebrities."
+        ]
+    }
+]
