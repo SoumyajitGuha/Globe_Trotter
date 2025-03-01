@@ -9,6 +9,7 @@ interface GameScreenProps {
   userId?: string;
 }
 
+const API_URL = process.env.REACT_APP_API_URL;
 const TOTAL_QUESTIONS = 10;
 
 const GameScreen: React.FC<GameScreenProps> = ({ userId }) => {
@@ -21,7 +22,7 @@ const GameScreen: React.FC<GameScreenProps> = ({ userId }) => {
   const [showConfetti, setShowConfetti] = useState(false);
 
   const fetchDestination = async () => {
-    const { data } = await axios.get<GameState>('http://localhost:3000/api/destination/random');
+    const { data } = await axios.get<GameState>(`${API_URL}/api/destination/random`);
     setGameState(data);
     setFeedback(null);
     setSelectedAnswer(null);
@@ -31,7 +32,7 @@ const GameScreen: React.FC<GameScreenProps> = ({ userId }) => {
   const submitAnswer = async (answer: string) => {
     if (feedback) return;
 
-    const { data } = await axios.post<Feedback>('http://localhost:3000/api/destination/answer', {
+    const { data } = await axios.post<Feedback>(`${API_URL}/api/destination/answer`, {
       destinationId: gameState?.destinationId,
       selectedAnswer: answer,
       userId,

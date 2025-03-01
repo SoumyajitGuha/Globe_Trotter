@@ -8,9 +8,11 @@ const App: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [userName, setUserName] = useState('');
 
+  const API_URL = process.env.REACT_APP_API_URL;
+
   const registerUser = async () => {
     if (userName) {
-      const { data } = await axios.post<{ userId: string }>('http://localhost:3000/api/user/register', { username: userName });
+      const { data } = await axios.post<{ userId: string }>(`${API_URL}/api/user/register`, { username: userName });
       setUserId(data.userId);
       setIsModalOpen(false);
       setUserName('');
