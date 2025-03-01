@@ -3,6 +3,8 @@ import { motion } from 'framer-motion';
 import GameScreen from './components/GameScreen';
 import axios from 'axios';
 
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL || 'https://globe-trotter-5.onrender.com';
+
 const App: React.FC = () => {
   const [userId, setUserId] = useState<string | undefined>(undefined);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -10,7 +12,7 @@ const App: React.FC = () => {
 
   const registerUser = async () => {
     if (userName) {
-      const { data } = await axios.post<{ userId: string }>('http://localhost:3000/api/user/register', { username: userName });
+      const { data } = await axios.post<{ userId: string }>(`${BACKEND_URL}/api/user/register`, { username: userName });
       setUserId(data.userId);
       setIsModalOpen(false);
       setUserName('');
