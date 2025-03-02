@@ -99,10 +99,27 @@ const GameScreen: React.FC<GameScreenProps> = ({ userId }) => {
         initial={{ y: -50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5 }}
-        className="text-5xl font-extrabold text-white mb-8 drop-shadow-[0_5px_5px_rgba(0,0,0,0.8)] z-10"
+        className="text-5xl font-extrabold text-white mb-4 drop-shadow-[0_5px_5px_rgba(0,0,0,0.8)] z-10"
       >
         Globetrotter
       </motion.h1>
+
+      {/* Score Counter */}
+      <motion.div
+        initial={{ y: -20, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+        className="flex gap-6 mb-8 z-10"
+      >
+        <div className="bg-green-100/90 backdrop-blur-sm px-4 py-2 rounded-full shadow-md">
+          <span className="text-lg font-semibold text-green-800">Correct: </span>
+          <span className="text-xl font-bold text-green-900">{score.correct}</span>
+        </div>
+        <div className="bg-red-100/90 backdrop-blur-sm px-4 py-2 rounded-full shadow-md">
+          <span className="text-lg font-semibold text-red-800">Incorrect: </span>
+          <span className="text-xl font-bold text-red-900">{score.incorrect}</span>
+        </div>
+      </motion.div>
 
       {gameState && !gameOver && (
         <motion.div
