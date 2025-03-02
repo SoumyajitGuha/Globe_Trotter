@@ -31,12 +31,12 @@ const GameScreen: React.FC<GameScreenProps> = ({ userId }) => {
 
   const submitAnswer = async (answer: string) => {
     if (feedback) return;
-
     const { data } = await axios.post<Feedback>(`${BACKEND_URL}/api/destination/answer`, {
       destinationId: gameState?.destinationId,
       selectedAnswer: answer,
       userId,
     });
+
     setFeedback(data);
     setSelectedAnswer(answer);
     setScore(prev => {
@@ -69,12 +69,15 @@ const GameScreen: React.FC<GameScreenProps> = ({ userId }) => {
   const progress = ((score.correct + score.incorrect) / TOTAL_QUESTIONS) * 100;
 
   const getButtonClass = (option: string) => {
-    if (!feedback || selectedAnswer !== option) {
+    if (!feedback) {
       return "bg-cyan-700 text-white p-4 rounded-xl font-semibold text-lg hover:bg-gray-900 transition-all duration-300 shadow-md";
     }
-    return feedback.isCorrect
-      ? "bg-green-700 text-white p-4 rounded-xl font-semibold text-lg transition-all duration-300 shadow-md"
-      : "bg-red-600 text-white p-4 rounded-xl font-semibold text-lg transition-all duration-300 shadow-md";
+    if (selectedAnswer === option) {
+      return feedback.isCorrect
+        ? "bg-green-700 text-white p-4 rounded-xl font-semibold text-lg transition-all duration-300 shadow-md"
+        : "bg-red-600 text-white p-4 rounded-xl font-semibold text-lg transition-all duration-300 shadow-md";
+    }
+    return "bg-gray-300 text-gray-600 p-4 rounded-xl font-semibold text-lg cursor-not-allowed transition-all duration-300 shadow-md";
   };
 
   return (
