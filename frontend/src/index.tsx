@@ -13,7 +13,7 @@ ReactDOM.render(
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import GameScreen from './components/GameScreen'; // Your main game component
-import ChallengeLanding from './components/CHallengeLanding';
+import ChallengeLanding from './components/ChallengeLanding';
 
 const App: React.FC = () => {
   return (
