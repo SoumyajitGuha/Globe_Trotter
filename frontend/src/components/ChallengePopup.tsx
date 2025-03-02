@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import html2canvas from 'html2canvas';
 import axios from 'axios';
@@ -10,22 +10,39 @@ interface ChallengePopupProps {
 
 const ChallengePopup: React.FC<ChallengePopupProps> = ({ userId, onClose }) => {
   const canvasRef = useRef<HTMLDivElement>(null);
+  const [score, setScore] = useState<number | null>(null);
+
+  useEffect(() => {
+    // Fetch the user's score
+    const fetchScore = async () => {
+      try {
+        const BACKEND_URL = process.env.REACT_APP_BACKEND_URL || 'https://globetrotter-backend.onrender.com';
+        const { data } = await axios.get<{ score: number }>(`${BACKEND_URL}/api/user/${userId}/score`);
+        setScore(data.score);
+      } catch (err) {
+        console.error('Error fetching score:', err);
+        setScore(0); // Fallback score
+      }
+    };
+
+    fetchScore();
+  }, [userId]);
 
   useEffect(() => {
     const generateImage = async () => {
-      if (canvasRef.current) {
+      if (canvasRef.current && score !== null) {
         const canvas = await html2canvas(canvasRef.current, {
           backgroundColor: null,
           scale: 2, // Higher resolution
         });
         const image = canvas.toDataURL('image/png');
-        const link = `https://globetrotter.app/challenge?inviterId=${userId}`;
-        const whatsappLink = `https://wa.me/?text=Check%20out%20my%20Globetrotter%20challenge!%20Join%20me%20here:%20${encodeURIComponent(link)}`;
+        const link = `https://globe-trotter-27da.vercel.app/challenge?inviterId=${userId}`;
+        const whatsappLink = `https://wa.me/?text=I%20scored%20${score}%20on%20Globetrotter!%20Beat%20me%20here:%20${encodeURIComponent(link)}`;
         window.open(whatsappLink, '_blank');
       }
     };
-    generateImage();
-  }, [userId]);
+    if (score !== null) generateImage(); // Wait for score to load
+  }, [userId, score]);
 
   return (
     <motion.div
@@ -58,6 +75,12 @@ const ChallengePopup: React.FC<ChallengePopupProps> = ({ userId, onClose }) => {
               <span className="font-semibold text-blue-800">Your ID:</span>
               <span className="bg-blue-100 px-3 py-1 rounded-full text-blue-900">{userId}</span>
             </p>
+            {score !== null && (
+              <p className="text-lg text-gray-700 flex items-center justify-center gap-2">
+                <span className="font-semibold text-blue-800">Your Score:</span>
+                <span className="bg-green-100 px-3 py-1 rounded-full text-green-900">{score}</span>
+              </p>
+            )}
             <p className="text-gray-600 text-center text-lg">
               Sharing your challenge via WhatsApp...
             </p>
